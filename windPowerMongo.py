@@ -31,7 +31,7 @@ wind_speed = np.array(data['wind_speed'])
 
 active_power = np.array(data['active_power'])
 
-# 读取标准功率数据
+# 读取excel功率数据
 df = pd.read_excel('C:\\Users\\dell\\Desktop\\power.xlsx')
 print(df)
 print(df.columns)
