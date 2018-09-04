@@ -17,7 +17,7 @@ field_dict = {"time":1,
               "wind_misalign":1,
               "_id":0}
 # 连接数据库
-conn = pymongo.MongoClient("10.0.7.37", 27017)
+conn = pymongo.MongoClient("myIP", 27017)
 db_auth = conn.admin
 db_auth.authenticate("root", "root")
 db = conn['kafkaads']  # 连接kafkaads数据库，没有则自动创建
