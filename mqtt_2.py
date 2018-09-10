@@ -6,10 +6,9 @@ import paho.mqtt.publish as publish
 import time
 import random
 
-HOST = "10.0.1.60"
-# HOST = "localhost"
-PORT = 1883
-# PORT = 61613
+
+HOST = "localhost"
+PORT = 61613
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     client.subscribe("test")
