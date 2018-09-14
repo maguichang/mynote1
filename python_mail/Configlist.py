@@ -9,22 +9,22 @@ config对象模块－－采用了 基于类继承的config结构，保存默认�
 class Config(object):
     DEBUG = False
     TESTING = False
-    DATABASE_URI = '10.0.7.37'
-    DATABASE_NAME = 'ads_monitor'
-    DATABASE_PORT = 3306
-    DATABASE_USER = 'root'
-    DATABASE_PASSWD = 'root'
+    DATABASE_URI = 'xx.xx.xx.xx'
+    DATABASE_NAME = 'db'
+    DATABASE_PORT = xx
+    DATABASE_USER = 'xx'
+    DATABASE_PASSWD = 'xx'
     MAIL_SERVER = 'smtp.163.com'
     MAIL_PORT = 25
-    MAIL_USERNAME = 'mgc5320'
-    MAIL_PASSWORD = 'mgc5320'
-    MAIL_SENDER = 'mgc5320@163.com'
-    MAIL_RECIPIENTS = 'juan.li@relectric.cn'
+    MAIL_USERNAME = 'xxx'
+    MAIL_PASSWORD = 'xxx'
+    MAIL_SENDER = 'xxx'
+    MAIL_RECIPIENTS = 'xxx'
 
 
 
 class ProductionConfig(Config):
-    DATABASE_URI = '10.0.7.37'
+    DATABASE_URI = 'xx.xx.xx.xx'
 
 
 class DevelopmentConfig(Config):
@@ -33,4 +33,4 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
-    MAIL_RECIPIENTS = '1019233973@qq.com'
+    MAIL_RECIPIENTS = 'xxx@qq.com'
