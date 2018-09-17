@@ -10,25 +10,24 @@ class Config(object):
     DEBUG = False
     TESTING = False
     # mongo setup
-    DATABASE_URI = '10.0.7.37'
-    DATABASE_NAME = 'kafkaads'
+    DATABASE_URI = 'ip'
+    DATABASE_NAME = 'kafkaTopic'
     DATABASE_PORT = 27017
-    DATABASE_USER = 'root'
-    DATABASE_PASSWORD = 'root'
+    DATABASE_USER = 'admin'
+    DATABASE_PASSWORD = 'admin'
     # mysql setup
-    MYSQL_URI = '10.0.7.37'
+    MYSQL_URI = 'ip'
     MYSQL_PORT = 3306
-    MYSQL_USER = 'root'
-    MYSQL_PWD = 'root'
+    MYSQL_USER = 'admin'
+    MYSQL_PWD = 'admin'
     MYSQL_DB = 'ads_monitor'
     #mail setup
     MAIL_SERVER = 'smtp.163.com'
     MAIL_PORT = 25
-    MAIL_USERNAME = 'mgc5320'
-    MAIL_PASSWORD = 'mgc5320'
-    MAIL_SENDER = 'mgc5320@163.com'
-    # MAIL_RECIPIENTS = 'juan.li@relectric.cn'
-    MAIL_RECIPIENTS = '1019233973@qq.com'
+    MAIL_USERNAME = '邮箱用户名'
+    MAIL_PASSWORD = '邮箱密码'
+    MAIL_SENDER = '发送邮箱'
+    MAIL_RECIPIENTS = '接收邮箱'
 
 
 
