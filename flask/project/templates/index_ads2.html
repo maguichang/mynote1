@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>功率数据分布</title>
+    <script type="text/javascript" src="{{url_for('static', filename='jquery-3.3.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='echarts.min.js')}}"></script>
+</head>
+<body>
+
+<div id="main" style="width:1500px;height:800px"></div>
+<script>
+    $(function (){
+
+        $.ajax({
+        type:'POST',
+        url:"/ads_analysis/{{choose_table}}/{{b_time}}/{{e_time}}/2",
+        dataType:"json",
+        success:function (returnDataTwo){
+        console.log('fff');
+			if (returnDataTwo.status==1)
+            {
+                var myChart = echarts.init(document.getElementById('main'));
+                 option = {
+                    title : {
+                        text: '风功率分布',
+                        subtext: '数据来自: 最近24小时'
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '7%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    tooltip : {
+                        // trigger: 'axis',
+                        showDelay : 0,
+                        formatter : function (params) {
+                            if (params.value.length > 1) {
+                                return params.seriesName + ' :<br/>'
+                                + params.value[0] + 'm/s '
+                                + params.value[1] + 'kw ';
+                            }
+                            else {
+                                return params.seriesName + ' :<br/>'
+                                + params.name + ' : '
+                                + params.value + 'kw ';
+                            }
+                        },
+                        axisPointer:{
+                            show: true,
+                            type : 'cross',
+                            lineStyle: {
+                                type : 'dashed',
+                                width : 1
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataZoom: {},
+                            brush: {
+                                type: ['rect', 'polygon', 'clear']
+                            }
+                        }
+                    },
+                    brush: {
+                    },
+                    legend: {
+                        data: ['fit','active'],
+                        left: 'center'
+                    },
+                    xAxis : [
+                        {
+                            type : 'value',
+                            scale:true,
+                            axisLabel : {
+                                formatter: '{value} m/s'
+                            },
+                            splitLine: {
+                                show: false
+                            }
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value',
+                            scale:true,
+                            axisLabel : {
+                                formatter: '{value} kw'
+                            },
+                            splitLine: {
+                                show: false
+                            }
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'fit',
+                            type:'line',
+                            data: returnDataTwo.fit
+                        },
+                        {
+                            name:'active',
+                            type:'scatter',
+                            symbolSize: 3,
+                            data: returnDataTwo.active
+                        }
+                    ]
+                };
+
+
+                myChart.setOption(option);
+            }
+        }
+        })
+    })
+</script>
+</body>
+</html>

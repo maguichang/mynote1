@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>N3超速统计</title>
+    <script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='echarts.min.js')}}"></script>
+</head>
+<body>
+
+<div id="main" style="width:1500px;height:800px"></div>
+<script>
+    $(function (){
+
+        $.ajax({
+        type:'POST',
+        url:"/ads_analysis/{{choose_table}}/{{b_time}}/{{e_time}}/6",
+        dataType:"json",
+        success:function (returnDataSix){
+			if (returnDataSix.status==1)
+            {
+                var myChart = echarts.init(document.getElementById('main'));
+                option = {
+                    title : {
+                        text: '数据采集',
+                        subtext: 'n3超速统计',
+                    },
+                    tooltip : {
+                        trigger: 'axis',
+                        textStyle:{
+							color:'#ffffff',
+						}
+
+                    },
+                    legend: {
+                        data:['ads_analysis1'],
+                    },
+                    dataZoom : {
+                                    show : true,
+                                    realtime : true,
+                                    start :1,
+                                    end : 30,
+                                    bottom: 5
+                                },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {show: true, type: ['line', 'bar']},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        },
+						iconStyle:{
+					        	normal:{
+					        		color:'#FFDAB9',
+					        		<!--borderColor:'#ffffff',-->
+					        	},
+					        },
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+							axisLine:{
+					            	lineStyle:
+					            	{
+					            		color:'#9400D3',
+					            	},
+					            },
+                            boundaryGap : false,
+
+                            data : returnDataSix.datetime
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value',
+                            axisLabel : {
+                                formatter: '{value} 值'
+                            },
+							axisLine:{
+					            	lineStyle:
+					            	{
+					            		<!--color:'#9400D3',-->
+					            	},
+					            },
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'ads_analysis1',
+                            type:'line',
+                            data:returnDataSix.num,
+                            markPoint : {
+                                data : [
+                                    {type : 'max', name: '最大值'},
+                                    {type : 'min', name: '最小值'}
+                                ]
+                            },
+                            <!--markLine : {-->
+                                <!--data : [-->
+                                    <!--{type : 'average', name: '平均值'}-->
+                                <!--]-->
+                            <!--}-->
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            }
+        }
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+.circle{
+width:20px;
+height:20px;
+background-color:#FF0000;
+border-radius:50px; /* 图形的半径 */
+margin: auto;
+margin-top: 20px;
+}
+
+.block{
+width:25px;
+height:35px;
+border:2px solid #6C757D
+}
+#grid_info{
+position: absolute;
+left: 970px;
+top: 110px;
+width: 130px;
+color: #005CBF;
+}
+.words_400VAC{
+position:absolute;
+top: 170px;
+left: 435px;
+font-size: larger;
+color: #005CBF;
+}
+/********************400VAC挂载设备********************/
+.line1{
+width:1000px;
+height:3px;
+margin:0px auto;
+padding:0px;
+background-color:#FF0000;
+overflow:hidden;
+}
+/**********DC/AC模块样式**********/
+#DCAC{
+margin-left: -50px;
+}
+#block_DCAC{
+width:90px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 155px;
+}
+/**********光伏1模块**********/
+#photovoltaic1{
+float: left; 
+margin-left: -100px;
+}
+#break_photovoltaic1{
+margin-left: 190px;
+}
+#block_photovoltaic1{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_photovoltaic1{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size: small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********光伏2模块**********/
+#photovoltaic2{
+float: left; 
+margin-left: -120px;
+}
+#break_photovoltaic2{
+margin-left: 190px;
+}
+#block_photovoltaic2{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_photovoltaic2{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********光伏3模块**********/
+#photovoltaic3{
+float: left; 
+margin-left: -120px;
+}
+#break_photovoltaic3{
+margin-left: 190px;
+}
+#block_photovoltaic3{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_photovoltaic3{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********充电桩1**********/
+#charge1{
+float: left; 
+margin-left: -120px;
+}
+#break_charge1{
+margin-left: 190px;
+}
+#block_charge1{
+width:100px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 150px;
+}
+#info_charge1{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********充电桩2**********/
+#charge2{
+float: left; 
+margin-left: -120px;
+}
+#break_charge2{
+margin-left: 190px;
+}
+#block_charge2{
+width:100px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 150px;
+}
+#info_charge2{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/********************12VDC挂载设备********************/
+.words_12VDC{
+position:absolute;
+top: 480px;
+left: 465px;
+font-size: larger;
+color: #005CBF;
+}
+.line2{
+width:900px;
+height:3px;
+margin:0px auto;
+margin-left: 110px;
+padding:0px;
+background-color:#FF0000;
+overflow:hidden;
+}
+/**********turbine1**********/
+#turbine1{
+margin-left: 0px;
+}
+#break_turbine1{
+margin-left: 190px;
+}
+#block_turbine1{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_turbine1{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********turbine2**********/
+#turbine2{
+margin-left: -125px;
+}
+#break_turbine2{
+margin-left: 190px;
+}
+#block_turbine2{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_turbine2{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********turbine3**********/
+#turbine3{
+margin-left: -125px;
+}
+#break_turbine3{
+margin-left: 190px;
+}
+#block_turbine3{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_turbine3{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********turbine4**********/
+#turbine4{
+margin-left: -125px;
+}
+#break_turbine4{
+margin-left: 190px;
+}
+#block_turbine4{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_turbine4{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********turbine5**********/
+#turbine5{
+margin-left: -125px;
+}
+#break_turbine5{
+margin-left: 190px;
+}
+#block_turbine5{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_turbine5{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
+/**********turbine6**********/
+#turbine6{
+margin-left: -125px;
+}
+#break_turbine6{
+margin-left: 190px;
+}
+#block_turbine6{
+width:80px;
+height:80px;
+line-height: 80px;
+background-color: #005CBF;
+color: #FFFFFF;
+font-size: x-large;
+text-align: center;
+margin-left: 160px;
+}
+#info_turbine6{
+width:140px;
+height:80px;
+color: #005CBF;
+font-size:small;
+text-align: center;
+margin-left: 130px;
+margin-top: 5px;
+}
