@@ -16,6 +16,7 @@ import pymysql
 from Configlist import *
 #
 app = Flask(__name__)
+# 导入配置文件信息
 para = Config()
 conn2 = pymysql.connect(
     # host = 'localhost',
