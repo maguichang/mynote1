@@ -21,3 +21,29 @@ a =10
 f = curve_pre()
 f(2)
 ```
+
+## python时间处理
+
+```
+str ----> date
+import datetime
+
+detester = ‘2017-01-01'
+date = datetime.datetime.strptime(detester,’%Y-%m-%d')
+```
+```
+date -----> str
+import datetime
+
+date = datetime.now()
+
+detester = date.strftime(‘%Y-%m-%d')
+```
+```
+# 毫秒处理
+datetime.datetime.strptime(data['firstfault'][i],'%Y-%m-%d %H:%M:%S.%f')
+```
+```
+# 向前减去30分钟
+datetime.datetime.strptime(data['firstfault'][i],'%Y-%m-%d %H:%M:%S.%f')+datetime.timedelta(minutes=-30)
+```
