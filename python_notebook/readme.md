@@ -47,3 +47,6 @@ datetime.datetime.strptime(data['firstfault'][i],'%Y-%m-%d %H:%M:%S.%f')
 # 向前减去30分钟
 datetime.datetime.strptime(data['firstfault'][i],'%Y-%m-%d %H:%M:%S.%f')+datetime.timedelta(minutes=-30)
 ```
+## 装饰器
+
+我们可以接受函数定义时的复杂，不能接受函数调用时的复杂。装饰器魔法糖，便于函数调用又不破换原函数的结构，增强函数的复用性和稳定性。 https://www.jianshu.com/p/1e2394733e77
